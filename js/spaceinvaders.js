@@ -40,12 +40,12 @@ function Game() {
         rocketVelocity: 120,
         rocketMaxFireRate: 2,
         gameWidth: 400,
-        gameHeight: 300,
+        gameHeight: 400,
         fps: 50,
         debugMode: false,
         invaderRanks: 5,
         invaderFiles: 10,
-        shipSpeed: 120,
+        shipSpeed: 160,
         levelDifficultyMultiplier: 0.2,
         pointsPerInvader: 5,
         limitLevelIncrease: 25
@@ -300,7 +300,7 @@ GameOverState.prototype.draw = function(game, dt, ctx) {
     ctx.fillStyle = '#ffffff';
     ctx.textBaseline="center"; 
     ctx.textAlign="center"; 
-    ctx.fillText("Game Over!", game.width / 2, game.height/2 - 40); 
+    ctx.fillText("Boomshakalaka! Game over", game.width / 2, game.height/2 - 40); 
     ctx.font="16px Arial";
     ctx.fillText("You scored " + game.score + " and got to level " + game.level, game.width / 2, game.height/2);
     ctx.font="16px Arial";
@@ -562,11 +562,11 @@ PlayState.prototype.draw = function(game, dt, ctx) {
     ctx.clearRect(0, 0, game.width, game.height);
     
     //  Draw ship.
-    ctx.fillStyle = '#999999';
+    ctx.fillStyle = '#f5a732'; // i like it orange
     ctx.fillRect(this.ship.x - (this.ship.width / 2), this.ship.y - (this.ship.height / 2), this.ship.width, this.ship.height);
 
     //  Draw invaders.
-    ctx.fillStyle = '#006600';
+    ctx.fillStyle = '#15e915'; // i like them green
     for(var i=0; i<this.invaders.length; i++) {
         var invader = this.invaders[i];
         ctx.fillRect(invader.x - invader.width/2, invader.y - invader.height/2, invader.width, invader.height);

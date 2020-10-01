@@ -1,3 +1,7 @@
+# FORKED for test purposes
+
+Don't use this one might remove it later :)
+
 # Space Invaders
 
 The classic Space Invaders game written in JavaScript as a learning exercise.

@@ -9,9 +9,9 @@ function Starfield() {
 	this.canvas = null;
 	this.width = 0;
 	this.width = 0;
-	this.minVelocity = 15;
-	this.maxVelocity = 30;
-	this.stars = 100;
+	this.minVelocity = 10;
+	this.maxVelocity = 50;
+	this.stars = 120;
 	this.intervalId = 0;
 }
 
